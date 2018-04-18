@@ -38,16 +38,14 @@ Adafruit_SSD1306 display(OLED_RESET);
 #define BARRAHIGIENE 45
 #define BARRAFELICIDADE 58
 
-enum estado 
-{
+enum estado {
   CLOCK,
   GAME,
   MENU,
   GAMEOVER
 };
 
-class Pet
-{
+class Pet{
   public:
   
     int vida;
@@ -68,8 +66,7 @@ class Pet
     
 };
 
-class MasterClock
-{
+class MasterClock{
     Time lastTime;
     
     int firstIt;
@@ -90,8 +87,7 @@ class MasterClock
     
 };
 
-class Animation //idle=0 , sleep=1, eat=2,  drink=3,  bath=4,  none=5,  death=6
-{
+class Animation{ //idle=0 , sleep=1, eat=2,  drink=3,  bath=4,  none=5,  death=6
     int estado;
     int frame;
     unsigned long lastIt;
@@ -149,8 +145,7 @@ void setup() ///////////////////////////////////////////////////////////////////
   //Mostra as mudanças no display(atualiza a imagem)
   display.display();
 
-  if(digitalRead(5)==0)
-  {
+  if(digitalRead(5)==0){
     //Verifica a integridade do savo do slot 0
     int slot0=EEPROM.read(saveIntegrity[0]);
     
@@ -158,36 +153,31 @@ void setup() ///////////////////////////////////////////////////////////////////
     int slot1=EEPROM.read(saveIntegrity[1]);
   
     //se o slot 0 estiver bom, carregar save do slot 0
-    if (slot0)
-    {
+    if (slot0){
       //carrega o save do slot 0
       readAnything((char*)&pet,sizeof(pet),save[0]);
     }
   
     //se o slot 0 estiver ruim e o 1 bom, carregar save do slot 1
-    else if (slot1)
-    {
+    else if (slot1){
       //carrega o save do slot 1
       readAnything((char*)&pet,sizeof(pet),save[1]);
     }
     //se ambos os slots estiverem corrompidos, criar novo pet 
-    else
-    {
+    else{
         //cria um novo pet
         pet.createPet();
     }
   }
-  else
-  {
+  else{
     pet.createPet();
   }
   int buttonLastState[3]={0};
   int menuItem=0;
   
-  while(1)
-  {
-      if(digitalRead(buttonPosition[3]))
-      {
+  while(1){
+      
+      if(digitalRead(buttonPosition[3])){
         GameState=CLOCK;
         pet.createPet();
       }
