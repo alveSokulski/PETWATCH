@@ -1,7 +1,7 @@
 /*Incluindo todas as bibliotecas e coisinhas de um jeito mais bonito*/
 #include "all.h"
 
-/*Taxa de decaimento das barras no tempo*/
+/*Taxa de variação das barras*/
 const int velPerda=1;
 const int perdaFome=2;
 const int perdaSede=3;
@@ -16,7 +16,7 @@ const int perdaFelicidade=1;
 #define BARRAHIGIENE 45
 #define BARRAFELICIDADE 58
 
-enum estado {
+enum estado{
   CLOCK,
   GAME,
   MENU,
@@ -25,7 +25,6 @@ enum estado {
 
 class Pet{
   public:
-  
     int vida;
     int fome;
     int sede;
@@ -41,7 +40,6 @@ class Pet{
     void limpar();
     void brincar();    
     void createPet();
-    
 };
 
 class MasterClock{
