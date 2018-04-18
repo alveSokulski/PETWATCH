@@ -1,6 +1,7 @@
 /*Incluindo todas as bibliotecas e coisinhas de um jeito mais bonito*/
 #include "all.h"
 
+
 /*Taxa de variação das barras*/
 const int velPerda=1;
 const int perdaFome=2;
