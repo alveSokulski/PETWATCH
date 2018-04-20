@@ -1,5 +1,6 @@
 /*Incluindo todas as bibliotecas e coisinhas de um jeito mais bonito*/
 #include "all.h"
+#include "sprites.h"
 
 /*Defines e coisas técnicas do projeto*/
 //Modulo RTC DS1307 ligado as portas A4 e A5 do Arduino 
