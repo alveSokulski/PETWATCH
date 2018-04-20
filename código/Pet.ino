@@ -1,6 +1,18 @@
 /*Incluindo todas as bibliotecas e coisinhas de um jeito mais bonito*/
 #include "all.h"
 
+/*Defines e coisas técnicas do projeto*/
+//Modulo RTC DS1307 ligado as portas A4 e A5 do Arduino 
+DS1307 rtc(A4, A5);
+
+/*Definindo mais coisas*/
+const int buttonPosition[4]={3,4,5,2};
+const char saveIntegrity[2]={0,1};
+const char save[2]={5,50};
+const char timeSaveIntegrity[2]={2,3};
+const char timeSave[2]={100,150};
+const int daysPerMonth[2][13] = {{-1, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31},
+                           {-1, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}};
 
 /*Taxa de variação das barras*/
 const int velPerda=1;
