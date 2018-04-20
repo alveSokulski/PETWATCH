@@ -6,7 +6,6 @@
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 #include <DS1307.h>
-#include "sprites.h"
 
 #define LOGO16_GLCD_HEIGHT 16 
 #define LOGO16_GLCD_WIDTH  16 
@@ -18,10 +17,7 @@ Adafruit_SSD1306 display(OLED_RESET);
 #error("Height incorrect, please fix Adafruit_SSD1306.h!");
 #endif
 
-
-
-/*Funcoes do projeto*/
-/*Obrigado, Finger*/
+/*Funcoes do projeto (Obrigado, Finger)*/
 void escrever(char stringue[], short int tamanho ,short int tamanhoFonte, short int cor, short int posX, short int posY);
 char intToChar(int a);
 void displayStats();
