@@ -1,5 +1,4 @@
-#ifndef __ALL_H
-#define __ALL_H
+#pragma once
 
 #include <Wire.h>
 #include <EEPROM.h>
@@ -27,5 +26,3 @@ void storeAnything(char * thing, int tam, int pos);
 void readAnything(char * thing, int tam, int pos);
 void opcoesMenu(int opcao);
 void mostrarHoras();
-
-#endif /*__ALL_H*/
