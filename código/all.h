@@ -6,6 +6,13 @@
 #include <Adafruit_SSD1306.h>
 #include <DS1307.h>
 
+
+//Incluindo as classes
+#include"pet.h"
+#include"masterclock.h"
+#include"animation.h"
+
+
 #define LOGO16_GLCD_HEIGHT 16 
 #define LOGO16_GLCD_WIDTH  16 
 
