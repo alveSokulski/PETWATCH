@@ -1,17 +1,12 @@
 
 // Programado por Henrique Finger Zimerman
-// Embelezado por Pedro Sokulski
 // Invejosos diro que mentira
 // - Eh mentira ~ratatusznei
-
+// Embelezado por Pedro Sokulski
 
 /*Incluindo todas as bibliotecas e coisinhas de um jeito mais bonito*/
 #include "all.h"
 #include "sprites.h"
-
-#include"pet.h"
-#include"masterclock.h"
-#include"animation.h"
 
 /*Defines e coisas técnicas do projeto*/
 //Modulo RTC DS1307 ligado as portas A4 e A5 do Arduino 
