@@ -6,6 +6,13 @@
 
 #include"sprites.h"
 
+enum estado{
+  CLOCK,
+  GAME,
+  MENU,
+  GAMEOVER
+};
+
 /*Incluindo todas as bibliotecas e coisinhas de um jeito mais bonito*/
 #include "all.h"
 
@@ -36,13 +43,6 @@ const int perdaFelicidade=1;
 #define BARRASEDE 32
 #define BARRAHIGIENE 45
 #define BARRAFELICIDADE 58
-
-enum estado{
-  CLOCK,
-  GAME,
-  MENU,
-  GAMEOVER
-};
 
 Pet pet; //instancia o objeto pet da classe Pet
 MasterClock relogio; //instancia o objeto relogio da classe MasterClock
